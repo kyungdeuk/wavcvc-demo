@@ -1,313 +1,116 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
+<h3>WaveVC: Speech and Fundamental Frequency Consistent Adversarial Raw Audio Voice Conversion</h3>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+<p> The converted examples are used to evalute MOS test.</p>
 
-  <title>Resume - Kyungdeuk Ko</title>
+<h4 id="Seen-to-Seen">Seen to Seen</h4>
 
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"> </th>
+      <th style="text-align: center">Source</th>
+      <th style="text-align: center">Target</th>
+      <th style="text-align: center">AdaIN-VC</th>
+      <th style="text-align: center">Again-VC</th>
+      <th style="text-align: center">NVC-Net</th>
+      <th style="text-align: center">WaveVC</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><strong>M2M</strong></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/seen/m2m/source.wav" />&lt;/source&gt; </audio></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/seen/m2m/target.wav" />&lt;/source&gt; </audio></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/seen/m2m/adain.wav" />&lt;/source&gt; </audio></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/seen/m2m/again.wav" />&lt;/source&gt; </audio></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/seen/m2m/nvc.wav" />&lt;/source&gt; </audio></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/seen/m2m/wave.wav" />&lt;/source&gt; </audio></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>M2F</strong></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/seen/m2f/source.wav" />&lt;/source&gt; </audio></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/seen/m2f/target.wav" />&lt;/source&gt; </audio></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/seen/m2f/adain.wav" />&lt;/source&gt; </audio></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/seen/m2f/again.wav" />&lt;/source&gt; </audio></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/seen/m2f/nvc.wav" />&lt;/source&gt; </audio></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/seen/m2f/wave.wav" />&lt;/source&gt; </audio></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>F2M</strong></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/seen/f2m/source.wav" />&lt;/source&gt; </audio></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/seen/f2m/target.wav" />&lt;/source&gt; </audio></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/seen/f2m/adain.wav" />&lt;/source&gt; </audio></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/seen/f2m/again.wav" />&lt;/source&gt; </audio></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/seen/f2m/nvc.wav" />&lt;/source&gt; </audio></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/seen/f2m/wave.wav" />&lt;/source&gt; </audio></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>F2F</strong></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/seen/f2f/source.wav" />&lt;/source&gt; </audio></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/seen/f2f/target.wav" />&lt;/source&gt; </audio></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/seen/f2f/adain.wav" />&lt;/source&gt; </audio></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/seen/f2f/again.wav" />&lt;/source&gt; </audio></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/seen/f2f/nvc.wav" />&lt;/source&gt; </audio></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/seen/f2f/wave.wav" />&lt;/source&gt; </audio></td>
+    </tr>
+  </tbody>
+</table>
 
-  <!-- Custom fonts for this template -->
-  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
 
-  <!-- Custom styles for this template -->
-  <link href="css/resume.css" rel="stylesheet">
-  <link href="css/kdko.css" rel="stylesheet">
 
-</head>
+<h4 id="Unseen-to-Unseen">Unseen to Uneen</h4>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"> </th>
+      <th style="text-align: center">Source</th>
+      <th style="text-align: center">Target</th>
+      <th style="text-align: center">AdaIN-VC</th>
+      <th style="text-align: center">Again-VC</th>
+      <th style="text-align: center">NVC-Net</th>
+      <th style="text-align: center">WaveVC</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><strong>M2M</strong></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/unseen/m2m/source.wav" />&lt;/source&gt; </audio></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/unseen/m2m/target.wav" />&lt;/source&gt; </audio></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/unseen/m2m/adain.wav" />&lt;/source&gt; </audio></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/unseen/m2m/again.wav" />&lt;/source&gt; </audio></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/unseen/m2m/nvc.wav" />&lt;/source&gt; </audio></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/unseen/m2m/wave.wav" />&lt;/source&gt; </audio></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>M2F</strong></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/unseen/m2f/source.wav" />&lt;/source&gt; </audio></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/unseen/m2f/target.wav" />&lt;/source&gt; </audio></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/unseen/m2f/adain.wav" />&lt;/source&gt; </audio></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/unseen/m2f/again.wav" />&lt;/source&gt; </audio></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/unseen/m2f/nvc.wav" />&lt;/source&gt; </audio></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/unseen/m2f/wave.wav" />&lt;/source&gt; </audio></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>F2M</strong></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/unseen/f2m/source.wav" />&lt;/source&gt; </audio></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/unseen/f2m/target.wav" />&lt;/source&gt; </audio></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/unseen/f2m/adain.wav" />&lt;/source&gt; </audio></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/unseen/f2m/again.wav" />&lt;/source&gt; </audio></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/unseen/f2m/nvc.wav" />&lt;/source&gt; </audio></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/unseen/f2m/wave.wav" />&lt;/source&gt; </audio></td>
 
-<body id="page-top">
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>F2F</strong></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/unseen/f2f/source.wav" />&lt;/source&gt; </audio></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/unseen/f2f/target.wav" />&lt;/source&gt; </audio></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/unseen/f2f/adain.wav" />&lt;/source&gt; </audio></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/unseen/f2f/again.wav" />&lt;/source&gt; </audio></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/unseen/f2f/nvc.wav" />&lt;/source&gt; </audio></td>
+      <td style="text-align: center"><audio controls="controls">  <source type="audio/wav" src="data/unseen/f2f/wave.wav" />&lt;/source&gt; </audio></td>
+    </tr>
+  </tbody>
+</table>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-    <a class="navbar-brand js-scroll-trigger" href="#page-top">
-      <span class="d-block d-lg-none">Kyungdeuk Ko</span>
-      <span class="d-none d-lg-block">
-        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
-      </span>
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#education">Education</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#publications">Publications</a>
-      </ul>
-    </div>
-  </nav>
 
-  <div class="container-fluid p-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
-      <div class="w-100">
-        <h1 class="mb-0">Kyungdeuk
-          <span class="text-primary">Ko</span>
-        </h1>
-        <div class="subheading mb-5">Hanam-si · Gyeonggi-do · Republic of Korea ·
-          <a href="kdko@korea.ac.kr">kdko@korea.ac.kr</a>
-        </div>
-        <p class="lead mb-5">I am studying various signal processing fields using artificial intelligence technology. I experienced signal classification using CNN, signal generation using GAN, and time series data analysis using RNN. Also, I pursue various experiences such as learning web development through internships and education.</p>
-        <div class="social-icons" >
-          <a href="https://www.linkedin.com/in/kyungdeuk-ko-a3275919a/" id="linkedin">
-            <i class="fab fa-linkedin-in" ></i>
-          </a>
-          <a href="https://github.com/KyungdeukKo" id="github">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="#" id="instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="#" id="facebook">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
-      <div class="w-100">
-        <h2 class="mb-5">Experience</h2>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">Samsung Software Academy for Youth</h3>
-            <div class="subheading mb-3">Trainee</div>
-            <p>SSAFY (Samsung Software Academy For Youth) is a software education program organized by Samsung and supported by the Ministry of Employment and Labor. I could learn various algorithms and web development such as HTML, Bootstrap, and django from SSAFY.</p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">January 2020 - May 2020</span>
-          </div>
-        </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">Korea Institute of Science and Technology</h3>
-            <div class="subheading mb-3">Trainee</div>
-            <p>I studied bio signal processing and deep learning while I was a trainee at KIST (Korea Institute of Science and Technology). In particular, I participated in blood flow and heart rate measurement using fNIRs.</p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">March 2017 - May 2017</span>
-          </div>
-        </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">JE Lab</h3>
-            <div class="subheading mb-3">Intern</div>
-            <p>JE Lab was a startup company that developed foot massage devices. I did an internship here during the winter vacation. During my internship, I was in charge of web development and app development.</p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">December 2015 - February 2016</span>
-          </div>
-        </div>
-
-      </div>
-
-    </section>
-
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education">
-      <div class="w-100">
-        <h2 class="mb-5">Education</h2>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="d-flex flex-column flex-md-row">
-            <img src="img/korea.png" style="height: 4em; width: 3em;" class="mr-3 mt-1">
-            <div class="resume-content">
-              <h3 class="mb-0">Korea University</h3>
-              <div class="subheading mb-3">Ph.D. Course</div>
-              <div>Signal Processing, Deep Learning</div>
-              <p>GPA: 4.46 / 4.5</p>
-            </div>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">September 2020 - Present</span>
-          </div>
-        </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="d-flex flex-column flex-md-row">
-            <img src="img/korea.png" style="height: 4em; width: 3em;" class="mr-3 mt-1">
-            <div class="resume-content">
-              <h3 class="mb-0">Korea University</h3>
-              <div class="subheading mb-3">Master of Engineering</div>
-              <div>Electrical and Computer Engineering</div>
-              <p>GPA: 4.27 / 4.5</p>
-            </div>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">September 2017 - August 2019</span>
-          </div>
-        </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
-          <div class="d-flex flex-column flex-md-row">
-            <img src="img/yonsei.png" style="height: 4em; width: 4em;" class="mr-3 mt-1">
-            <div class="resume-content">
-              <h3 class="mb-0">Yonsei University Wonju Campus</h3>
-              <div class="subheading mb-3">Bachelor of Engineering</div>
-              <div>Bio Medical Engineering</div>
-              <p>GPA: 3.83 / 4.3</p>
-            </div>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">March 2011 - August 2017</span>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="skills">
-      <div class="w-100">
-        <h2 class="mb-5">Skills</h2>
-
-        <div class="subheading mb-0">Programming Languages &amp; Tools</div>
-        <ul class="list-inline dev-icons">
-          <li class="list-inline-item">
-            <img src="img/python.png" style="height:48px"></img>
-          </li>
-          <li class="list-inline-item">
-            <img src="img/tensorflow.png" style="height:48px"></img>
-          </li>
-          <li class="list-inline-item">
-            <img src="img/pytorch.png" style="height:48px"></img>
-          </li>
-          <li class="list-inline-item">
-            <img src="img/matlab.png" style="height:48px"></img>
-          </li>
-          <li class="list-inline-item">
-            <img src="img/c.png" style="height:48px"></img>
-          </li>
-          <li class="list-inline-item">
-            <img src="img/html5.png" style="height:48px"></img>
-          </li>
-          <li class="list-inline-item">
-            <img src="img/css3.png" style="height:48px"></img>
-          </li>
-          <li class="list-inline-item">
-            <img src="img/bootstrap.png" style="height:48px"></img>
-          </li>
-          <li class="list-inline-item">
-            <img src="img/django.png" style="height:48px"></img>
-          </li>
-          <li class="list-inline-item">
-            <img src="img/android.png" style="height:48px"></img>
-          </li>
-        </ul>
-
-        <div class="subheading mb-3">Workflow</div>
-        <ul class="fa-ul mb-0">
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            Deep Leanring &amp; Artificial Intelligence</li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            Generative Adversarial Networks (GAN)</li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            Signal Processing &amp; Signal Classification</li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            Web Development</li>
-          <li>
-        </ul>
-      </div>
-    </section>
-
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="interests">
-      <div class="w-100">
-        <h2 class="mb-5">Interests</h2>
-        <p>I have been playing basketball as a hobby since I was in middle school. I sometimes participated in competitions with my friends. As a result, I participated in the high school basketball tournament and finished second. In university, I joined a basketball club and participated in the contest as an entry. I played the role of president when I was in third grade, and I won the competition before I graduated.</p>
-        <p class="mb-0">I travel both domestic and overseas during vacation. I like to visit famous restaurants in Korea by train. Also, I like to go abroad and eat the country's food. Overseas countries and cities that have traveled so far include Italy, Japan, China, Hong Kong, India, Hawaii and Canada.</p>
-      </div>
-    </section>
-
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="publications">
-      <div class="w-100">
-        <h2 class="mb-5">Publications</h2>
-        <div class="subheading mb-3">International Journal</div>
-        <ol class="fa-ol mb-0">
-          <li>
-            Bokyeung Lee, <strong>Kyungdeuk Ko</strong>, Jonghwan Hong, Bonhwa Ku, and Hanseok Ko, "Information Bottleneck Measurement for Compressed Sensing Image Reconstruction," IEEE Signal Processing Letters, 2022</li>
-        </ol>
-        <ol class="fa-ol mb-0">
-          <li>
-            Donghyeon Kim, <strong>Kyungdeuk Ko</strong>, David K. Han, and Hanseok Ko, "Discriminatory and Orthogonal Feature Learning for Noise Robust Keyword Spotting," IEEE Signal Processing Letters, 2022</li>
-        </ol>
-        <ol class="fa-ol mb-0">
-          <li>
-            <strong>Kyungdeuk Ko</strong>, Jaihyun Park, David K. Han, and Hanseok Ko, "Channel and Frequency Attention Module for Diverse Animal Sound Classification," IEICE Transactions on Information and Systems, Vol.E102-D, No.12, pp.2615-2618, Dec, 2019</li>
-        </ol>
-        <div class="subheading mt-5 mb-3">International Conference</div>
-        <ol class="fa-ol mb-0">
-         <li>
-            <strong>Kyungdeuk Ko</strong>, Bokyeung Lee, Jonghwan Hong, David Han and Hanseok Ko, "Deep Degradation Prior for Real-World Super-Resolution," The British Machine Vision Conference (BMVC), Virtual, 2021</li>
-          <li>
-            <strong>Kyungdeuk Ko</strong>, Sangwook Park, and Hanseok Ko, "Convolutional Feature Vectors and Support Vector Machine for Animal Sound Classification," International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC), Honolulu, HI, USA, 2018</li>
-        </ol>
-        <div class="subheading mt-5 mb-3">Domestic Journal</div>
-        <ol class="fa-ol mb-0">
-          <li>
-            Alzahra Badi, <strong>고경득</strong>, 고한석, "PNCC와 Robust Mel-log Filter Bank 특징을 결합한 조류 울음소리 분류," 한국음향학회지, 제38권, 1호, pp.39-46, January, 2019</li>
-          <li>
-            <strong>고경득</strong>, 박상욱, 고한석, "공분산과 모듈로그램을 이용한 콘볼루션 신경망 기반 양서류 울음소리 구별", 한국음향학회지, 제37권, 제 1호, pp.60-65, January, 2018</li>
-          <li>
-            박상욱, <strong>고경득</strong>, 고한석, "양서류 울음소리 식별을 위한 특징 벡터 및 인식 알고리즘 성능 분석", 한국음향학회지, 제36권, 6호, pp.401-406, November, 2017</li>
-        </ol>
-        <div class="subheading mt-5 mb-3">Domestic Conference</div>
-        <ol class="fa-ol mb-0">
-          <li>
-            <strong>고경득</strong>, 고한석, "GAN을 이용한 양서류 울음소리 데이터 증대," 제 36회 음성통신 및 신호처리 학술대회 논문집,pp37August, 2019</li>
-          <li>
-            <strong>고경득</strong>, 박상욱, 고한석, "RNN을 이용한 장-단기 음향 이벤트 신호 분류," 제35회 음성통신 및 신호처리 학술대회 논문집, pp.16, August, 2018</li>
-        </ol>
-      </div>
-    </section>
-  </div>
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Plugin JavaScript -->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  <!-- Custom scripts for this template -->
-  <script src="js/resume.min.js"></script>
-
-</body>
-
-</html>
